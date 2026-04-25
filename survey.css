@@ -1,4 +1,4 @@
-/* Setup for A4 Page formatting */
+
 @page {
     size: A4;
     margin: 25.4mm;
@@ -61,11 +61,10 @@ body {
     margin-left: 10px
 }
 
-/* Checkbox Alignment */
 .checkbox-list {
     list-style-type: none;
     padding-left: 0;
-    margin-left: 25px; /* Aligns options under the question text */
+    margin-left: 25px; 
     margin-top: 8px;
 }
 
@@ -80,26 +79,25 @@ body {
     margin-top: 4px;
 }
 
-/* Shift all textareas to the right */
+
 textarea {
-    display: block;           /* Ensures it stays on its own line */
-    margin-left: 30px;        /* Adjust this number to shift further right */
-    width: calc(100% - 50px); /* Subtracts the margin from the width to keep it perfectly aligned on the right edge */
-    box-sizing: border-box;   /* Keeps the box within the container */
-    margin-top: 20px;         /* Adds space between the text and the box */
+    display: block;           
+    margin-left: 30px;        
+    width: calc(100% - 50px); 
+    box-sizing: border-box;   
+    margin-top: 20px;       
     border: 1px solid #000;
 }
 
-/* Specifically for textareas inside lists (like under "Other") */
+
 .checkbox-list textarea {
-    margin-left: 30px;        /* Slightly different shift for nested boxes if desired */
+    margin-left: 30px;        
     width: calc(100% - 30px);
 }
 
-/* Ensure 'Other' textareas inside lists don't look cramped */
 .checkbox-list textarea {
     margin-top: 15px;
-    width: 95%; /* Slightly narrower when inside a list for visual hierarchy */
+    width: 95%; 
 }
 
 .footer-note {
