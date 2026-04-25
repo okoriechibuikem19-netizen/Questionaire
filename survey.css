@@ -1,0 +1,134 @@
+/* Setup for A4 Page formatting */
+@page {
+    size: A4;
+    margin: 25.4mm;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.header {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24pt;
+    margin-bottom: 4pt;
+    text-transform: uppercase;
+}
+
+.theme {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18pt;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 14pt;
+    text-transform: uppercase;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+    
+}
+
+.sub-text{
+    padding-left: 40px;
+}
+
+
+
+.question-group {
+    margin-bottom: 20pt;
+    
+}
+
+.question-text {
+    font-weight: bold;
+    margin-left: 10px
+}
+
+/* Checkbox Alignment */
+.checkbox-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 25px; /* Aligns options under the question text */
+    margin-top: 8px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+/* Shift all textareas to the right */
+textarea {
+    display: block;           /* Ensures it stays on its own line */
+    margin-left: 30px;        /* Adjust this number to shift further right */
+    width: calc(100% - 50px); /* Subtracts the margin from the width to keep it perfectly aligned on the right edge */
+    box-sizing: border-box;   /* Keeps the box within the container */
+    margin-top: 20px;         /* Adds space between the text and the box */
+    border: 1px solid #000;
+}
+
+/* Specifically for textareas inside lists (like under "Other") */
+.checkbox-list textarea {
+    margin-left: 30px;        /* Slightly different shift for nested boxes if desired */
+    width: calc(100% - 30px);
+}
+
+/* Ensure 'Other' textareas inside lists don't look cramped */
+.checkbox-list textarea {
+    margin-top: 15px;
+    width: 95%; /* Slightly narrower when inside a list for visual hierarchy */
+}
+
+.footer-note {
+    margin-top: 30pt;
+    font-size: 10.5pt;
+    text-align: justify;
+    font-style: italic;
+}
+
+.custom-button {
+    background-color: #1f6feb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.google-form {
+    width: 100%;
+    max-width: 800px;
+    height: 1000px;
+    border: none;
+}
