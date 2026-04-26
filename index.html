@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="survey.css">
 </head>
 <body>
-  <form data-netlify="true">
+  <form name="zenith-survey" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="zenith-survey" />
+
 <div class="container">
 
     <div class="header">ARTIFICIAL INTELLIGENCE IN BANKING SURVEY QUESTIONNAIRE</div>
@@ -26,14 +28,14 @@
             <li><span class="question-text">Job Role / Designation</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Customer Service Representative</li>
-            <li class="checkbox-item"><input type="checkbox"> Operations Officer</li>
-            <li class="checkbox-item"><input type="checkbox"> IT / Technology Specialist</li>
-            <li class="checkbox-item"><input type="checkbox"> Risk / Compliance Officer</li>
-            <li class="checkbox-item"><input type="checkbox"> Management / Executive</li>
+            <li class="checkbox-item"><input type="checkbox" name="job_role" value="Customer Service"> Customer Service Representative</li>
+            <li class="checkbox-item"><input type="checkbox" name="job_role" value="Operations"> Operations Officer</li>
+            <li class="checkbox-item"><input type="checkbox" name="job_role" value="IT Specialist"> IT / Technology Specialist</li>
+            <li class="checkbox-item"><input type="checkbox" name="job_role" value="Risk Compliance"> Risk / Compliance Officer</li>
+            <li class="checkbox-item"><input type="checkbox" name="job_role" value="Management"> Management / Executive</li>
             <li class="checkbox-item">Other (please specify):</li>
         </ul>
-        <textarea name="other_job_role" placeholder="Type here..." cols="20px" rows="10px"></textarea>
+        <textarea name="other_job_role_details" placeholder="Type here..." cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -41,10 +43,10 @@
             <li><span class="question-text">Years of Experience in the Banking Industry</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Less than 2 years</li>
-            <li class="checkbox-item"><input type="checkbox"> 2 – 5 years</li>
-            <li class="checkbox-item"><input type="checkbox"> 6 – 10 years</li>
-            <li class="checkbox-item"><input type="checkbox"> More than 10 years</li>
+            <li class="checkbox-item"><input type="checkbox" name="experience_years" value="Less than 2"> Less than 2 years</li>
+            <li class="checkbox-item"><input type="checkbox" name="experience_years" value="2-5 years"> 2 – 5 years</li>
+            <li class="checkbox-item"><input type="checkbox" name="experience_years" value="6-10 years"> 6 – 10 years</li>
+            <li class="checkbox-item"><input type="checkbox" name="experience_years" value="More than 10"> More than 10 years</li>
         </ul>
     </div>
 
@@ -55,7 +57,7 @@
             <li><span class="question-text">What are the most pressing operational challenges you encounter on a daily or regular basis in your role?</span></li>
         </ol>
         <div class="sub-text ">(Please describe briefly)</div>
-        <textarea name="operational_challenges" cols="20px" rows="10px"></textarea>
+        <textarea name="daily_operational_challenges" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -63,16 +65,16 @@
             <li><span class="question-text">Which of the following areas experience the most significant challenges? (Select up to three)</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Customer Onboarding (Account Opening / KYC)</li>
-            <li class="checkbox-item"><input type="checkbox"> Fraud Detection and Prevention</li>
-            <li class="checkbox-item"><input type="checkbox"> Customer Support and Service Delivery</li>
-            <li class="checkbox-item"><input type="checkbox"> Loan Processing and SME Lending</li>
-            <li class="checkbox-item"><input type="checkbox"> Payment Processing and Settlement</li>
-            <li class="checkbox-item"><input type="checkbox"> Internal Operations and Workflow Efficiency</li>
-            <li class="checkbox-item"><input type="checkbox"> Data Management and Analytics</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Customer Onboarding"> Customer Onboarding (Account Opening / KYC)</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Fraud Detection"> Fraud Detection and Prevention</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Customer Support"> Customer Support and Service Delivery</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Loan Processing"> Loan Processing and SME Lending</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Payment Processing"> Payment Processing and Settlement</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Internal Operations"> Internal Operations and Workflow Efficiency</li>
+            <li class="checkbox-item"><input type="checkbox" name="significant_challenge_areas" value="Data Management"> Data Management and Analytics</li>
             <li class="checkbox-item">Other (please specify):</li>
         </ul>
-        <textarea name="other_challenges" cols="20px" rows="10px"></textarea>
+        <textarea name="other_significant_challenges" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -80,11 +82,11 @@
             <li><span class="question-text">How would you rate the efficiency of your current systems in addressing these challenges?</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Very Efficient</li>
-            <li class="checkbox-item"><input type="checkbox"> Efficient</li>
-            <li class="checkbox-item"><input type="checkbox"> Neutral</li>
-            <li class="checkbox-item"><input type="checkbox"> Inefficient</li>
-            <li class="checkbox-item"><input type="checkbox"> Very Inefficient</li>
+            <li class="checkbox-item"><input type="checkbox" name="system_efficiency_rating" value="Very Efficient"> Very Efficient</li>
+            <li class="checkbox-item"><input type="checkbox" name="system_efficiency_rating" value="Efficient"> Efficient</li>
+            <li class="checkbox-item"><input type="checkbox" name="system_efficiency_rating" value="Neutral"> Neutral</li>
+            <li class="checkbox-item"><input type="checkbox" name="system_efficiency_rating" value="Inefficient"> Inefficient</li>
+            <li class="checkbox-item"><input type="checkbox" name="system_efficiency_rating" value="Very Inefficient"> Very Inefficient</li>
         </ul>
     </div>
 
@@ -95,9 +97,9 @@
             <li><span class="question-text">Is Artificial Intelligence (AI) currently deployed in any aspect of your bank's operations?</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Yes</li>
-            <li class="checkbox-item"><input type="checkbox"> No</li>
-            <li class="checkbox-item"><input type="checkbox"> Not Sure</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_currently_deployed" value="Yes"> Yes</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_currently_deployed" value="No"> No</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_currently_deployed" value="Not Sure"> Not Sure</li>
         </ul>
     </div>
 
@@ -105,7 +107,7 @@
         <ol start="2" class="question-list">
             <li><span class="question-text">If yes, in which areas is AI currently being used? (Please list or describe)</span></li>
         </ol>
-        <textarea name="ai_usage_areas" cols="20px" rows="10px"></textarea>
+        <textarea name="current_ai_usage_description" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -113,9 +115,9 @@
             <li><span class="question-text">How familiar are you with AI-powered tools in banking (e.g., chatbots, fraud detection systems, predictive analytics)?</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Very Familiar</li>
-            <li class="checkbox-item"><input type="checkbox"> Somewhat Familiar</li>
-            <li class="checkbox-item"><input type="checkbox"> Not Familiar</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_tool_familiarity" value="Very Familiar"> Very Familiar</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_tool_familiarity" value="Somewhat Familiar"> Somewhat Familiar</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_tool_familiarity" value="Not Familiar"> Not Familiar</li>
         </ul>
     </div>
 
@@ -126,16 +128,16 @@
             <li><span class="question-text">In which areas do you believe Artificial Intelligence can significantly improve banking services? (Select up to three)</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Fraud Detection and Prevention</li>
-            <li class="checkbox-item"><input type="checkbox"> Customer Service (Chatbots and Automation)</li>
-            <li class="checkbox-item"><input type="checkbox"> KYC / Identity Verification (including liveness detection)</li>
-            <li class="checkbox-item"><input type="checkbox"> Credit Scoring and SME Lending</li>
-            <li class="checkbox-item"><input type="checkbox"> Personalized Banking and Customer Experience</li>
-            <li class="checkbox-item"><input type="checkbox"> Internal Process Automation</li>
-            <li class="checkbox-item"><input type="checkbox"> Cybersecurity and Threat Detection</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Fraud Detection"> Fraud Detection and Prevention</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Customer Service"> Customer Service (Chatbots and Automation)</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="KYC Verification"> KYC / Identity Verification (including liveness detection)</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Credit Scoring"> Credit Scoring and SME Lending</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Personalized Banking"> Personalized Banking and Customer Experience</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Internal Process Automation"> Internal Process Automation</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_improvement_areas" value="Cybersecurity"> Cybersecurity and Threat Detection</li>
             <li class="checkbox-item">Other (please specify):</li>
         </ul>
-        <textarea name="other_opportunities" cols="20px" rows="10px"></textarea>
+        <textarea name="other_ai_improvement_areas" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -143,7 +145,7 @@
             <li><span class="question-text">What specific problems in your bank do you believe AI can help solve?</span></li>
         </ol>
         <span class="sub-text">(Please be as specific as possible)</span>
-        <textarea name="problems_ai_can_solve" cols="20px" rows="10px"></textarea>
+        <textarea name="problems_ai_can_solve_detailed" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -151,15 +153,15 @@
             <li><span class="question-text">What are the major challenges that may hinder the adoption of AI in your bank? (Select all that apply)</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> High Implementation Cost</li>
-            <li class="checkbox-item"><input type="checkbox"> Data Security and Privacy Concerns</li>
-            <li class="checkbox-item"><input type="checkbox"> Lack of Technical Expertise / Skilled Personnel</li>
-            <li class="checkbox-item"><input type="checkbox"> Organizational Resistance to Change</li>
-            <li class="checkbox-item"><input type="checkbox"> Regulatory and Compliance Issues</li>
-            <li class="checkbox-item"><input type="checkbox"> Infrastructure Limitations</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="High Cost"> High Implementation Cost</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="Data Security"> Data Security and Privacy Concerns</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="Lack of Expertise"> Lack of Technical Expertise / Skilled Personnel</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="Organizational Resistance"> Organizational Resistance to Change</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="Regulatory Issues"> Regulatory and Compliance Issues</li>
+            <li class="checkbox-item"><input type="checkbox" name="ai_adoption_challenges" value="Infrastructure Limitations"> Infrastructure Limitations</li>
             <li class="checkbox-item"> Other (please specify):</li>
         </ul>
-        <textarea name="other_challenges_adoption" cols="20px" rows="10px"></textarea>
+        <textarea name="other_adoption_challenges_details" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="section-title">SECTION E: INNOVATION AND FUTURE READINESS</div>
@@ -168,7 +170,7 @@
         <ol start="1" class="question-list">
             <li><span class="question-text">If you could introduce one technology solution to transform your bank today, what would it be and why?</span></li>
         </ol>
-        <textarea name="tech_solution" cols="20px" rows="10px"></textarea>
+        <textarea name="transformative_tech_solution" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="question-group">
@@ -176,10 +178,10 @@
             <li><span class="question-text">How important is innovation through AI and emerging technologies to the future success and competitiveness of your bank?</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Very Important</li>
-            <li class="checkbox-item"><input type="checkbox"> Important</li>
-            <li class="checkbox-item"><input type="checkbox"> Neutral</li>
-            <li class="checkbox-item"><input type="checkbox"> Not Important</li>
+            <li class="checkbox-item"><input type="checkbox" name="innovation_importance" value="Very Important"> Very Important</li>
+            <li class="checkbox-item"><input type="checkbox" name="innovation_importance" value="Important"> Important</li>
+            <li class="checkbox-item"><input type="checkbox" name="innovation_importance" value="Neutral"> Neutral</li>
+            <li class="checkbox-item"><input type="checkbox" name="innovation_importance" value="Not Important"> Not Important</li>
         </ul>
     </div>
 
@@ -188,9 +190,9 @@
             <li><span class="question-text">Would you be open to integrating AI-driven solutions into your daily workflow?</span></li>
         </ol>
         <ul class="checkbox-list">
-            <li class="checkbox-item"><input type="checkbox"> Yes</li>
-            <li class="checkbox-item"><input type="checkbox"> No</li>
-            <li class="checkbox-item"><input type="checkbox"> Maybe</li>
+            <li class="checkbox-item"><input type="checkbox" name="open_to_ai_integration" value="Yes"> Yes</li>
+            <li class="checkbox-item"><input type="checkbox" name="open_to_ai_integration" value="No"> No</li>
+            <li class="checkbox-item"><input type="checkbox" name="open_to_ai_integration" value="Maybe"> Maybe</li>
         </ul>
     </div>
 
@@ -199,7 +201,7 @@
         <ol start="1">
             <li><span class="question-text">Do you have any additional comments, suggestions, or insights regarding the use of AI in the banking sector? (Optional)</span></li>
         </ol>
-        <textarea name="additional_comments" cols="20px" rows="10px"></textarea>
+        <textarea name="final_additional_comments" cols="20px" rows="10px"></textarea>
     </div>
 
     <div class="footer-note">
