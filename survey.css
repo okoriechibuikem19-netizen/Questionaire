@@ -171,3 +171,51 @@ textarea {
         font-size: 13pt;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 10.5pt;
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header {
+        font-size: 18pt;
+        line-height: 1.2;
+    }
+
+    textarea {
+        display: block;           
+        margin-left: 30px;
+        width: calc(100% - 50px); 
+        box-sizing: border-box;   
+        margin-top: 20px;       
+        border: 1px solid #000;
+        height: 120px;
+    }
+
+    .checkbox-list textarea {
+        margin-left: 30px ;        
+        width: calc(100% - 30px) ;
+        margin-top: 15px;
+    }
+
+    .checkbox-list {
+        margin-left: 15px;
+    }
+
+    .checkbox-item {
+        margin-bottom: 10px;
+    }
+
+    .custom-button {
+        width: 100%;
+        padding: 14px;
+        margin-top: 25px;
+    }
+}
