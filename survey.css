@@ -130,3 +130,44 @@ textarea {
     height: 1000px;
     border: none;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 10pt;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100% !important; 
+    }
+
+    .header {
+        font-size: 16pt;
+        line-height: 1.2;
+    }
+
+    .theme {
+        font-size: 12pt;
+    }
+
+    .section-title {
+        font-size: 12pt;
+    }
+
+
+    textarea {
+        margin-left: 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    .checkbox-list {
+        margin-left: 5px;
+    }
+
+    .custom-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 13pt;
+    }
+}
